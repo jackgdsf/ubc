@@ -6,8 +6,6 @@ nav = [
     {"Components" = "components.md"},
     {"Components Plot" = "components_plot.md"},
     {"Changelog" = "changelog.md"}
-  ]},
-  {"Tutorial" = [
   ]}
 ]
 site_dir = "_build/html"
