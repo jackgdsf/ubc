@@ -29,21 +29,11 @@ cells = PDK.cells
 
 
 with open(filepath, "w+") as f:
-    f.write(
-        """
+    f.write("# Cells\n\n")
+    f.write("| Name | Description |\n")
+    f.write("|------|-------------|\n")
 
-Cells summary
-=============================
-
-.. currentmodule:: ubcpdk.cells
-
-.. autosummary::
-   :toctree: _autosummary/
-   :no-index:
-
-"""
-    )
-
+    cell_entries = []
     for name in sorted(cells.keys()):
         if name in skip or name.startswith("_"):
             continue
@@ -57,4 +47,13 @@ Cells summary
                 and p not in skip_settings
             ]
         )
-        f.write(f"   {name}\n")
+        doc = inspect.getdoc(cells[name]) or ""
+        first_line = doc.split("\n")[0] if doc else ""
+        f.write(f"| [{name}](#{name}) | {first_line} |\n")
+        cell_entries.append(name)
+
+    f.write("\n")
+
+    for name in cell_entries:
+        f.write(f"\n## {name}\n\n")
+        f.write(f"::: ubcpdk.cells.{name}\n\n")
