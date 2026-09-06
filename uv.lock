@@ -603,23 +603,6 @@ wheels = [
 ]
 
 [[package]]
-name = "doroutes"
-version = "1.1.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "kfactory" },
-    { name = "kwasm" },
-    { name = "numpy" },
-    { name = "shapely" },
-]
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/fb/88/91f559c1e1fc1d1f7e30136bcacdcc22f83ae2c0ed9b5c06c4d5790b43d0/doroutes-1.1.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:ec6168f0b57bb4a7dd8b1d4581fd371873b3921f86037fe03c6a6af7839457c2", size = 3325645, upload-time = "2026-06-04T10:06:12.47Z" },
-    { url = "https://files.pythonhosted.org/packages/7c/4e/6c0acffd204b131ee45d3f368b45fdc5093d35aa8c6275af2e49a8aad630/doroutes-1.1.0-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:1283de66b403a07930384cfa12890313d51c79b510303b6845d75497ee4f21c2", size = 3487225, upload-time = "2026-06-04T10:06:13.734Z" },
-    { url = "https://files.pythonhosted.org/packages/fa/05/fb812f7bb1cd3e291f1e20a03dd5075be19023a51779cc7fda6a135aed77/doroutes-1.1.0-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:c564ba2c1a71d83636df5dbdb55bab1daad02c250d095ea41f18c96ced2d0c1b", size = 3660432, upload-time = "2026-06-04T10:06:15.292Z" },
-    { url = "https://files.pythonhosted.org/packages/f8/c7/ba66b740b953bddf08eab076acecd803b8a6f8910a458e3177edfb29e804/doroutes-1.1.0-cp312-cp312-win_amd64.whl", hash = "sha256:fde94a996aff6804822a4ef4ba9f1832bf8c5bd8b87134fa16ed19f12ba2847a", size = 3045451, upload-time = "2026-06-04T10:06:16.51Z" },
-]
-
-[[package]]
 name = "elvis-lvs"
 version = "0.2.1"
 source = { registry = "https://pypi.org/simple" }
@@ -1659,17 +1642,6 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/aa/43/59c8680bce1005bb0247d4d4291d1862f62ac12e1bca984f22920b97996d/klujax-0.5.0-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:ea9668b52e6791345796470fba4a903113d2eef19ca03b58aaa54e76444522c5", size = 2915350, upload-time = "2026-04-15T18:52:09.238Z" },
     { url = "https://files.pythonhosted.org/packages/5f/26/48ed386475225905033f293ad67c48ccb83368b23192a0dc9f6272cdb59a/klujax-0.5.0-cp312-cp312-win_amd64.whl", hash = "sha256:fd2b664224a9f5935a4961d978ec9b40fc92fb35e78113ec0e8026be95132efe", size = 184786, upload-time = "2026-04-15T18:52:10.689Z" },
     { url = "https://files.pythonhosted.org/packages/07/02/f232f8801c9aaa069c3ae5e56e66222561a6e9fd38a627fb0c5a792dc22b/klujax-0.5.0-cp312-cp312-win_arm64.whl", hash = "sha256:f4198d9973958246c9c8282004ee4053f36af3a000b9d7960b9aeb705362ee4a", size = 155148, upload-time = "2026-04-15T18:52:11.965Z" },
-]
-
-[[package]]
-name = "kwasm"
-version = "0.2.26"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "typer" },
-]
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/ff/a9/96f5b9f3ad75a4f9d3b2e36b64df013c1105729890e7c15f3d8810636f09/kwasm-0.2.26-py3-none-any.whl", hash = "sha256:c07af2bbf27335777ad604041c4c78752bf07c21c77a685a26c0de098dc47e4a", size = 6938612, upload-time = "2026-08-20T15:42:23.961Z" },
 ]
 
 [[package]]
@@ -3608,7 +3580,6 @@ name = "ubcpdk"
 version = "3.3.5"
 source = { editable = "." }
 dependencies = [
-    { name = "doroutes" },
     { name = "gdsfactory" },
     { name = "gdsfactoryplus" },
     { name = "gplugins", extra = ["sax", "tidy3d"] },
@@ -3636,7 +3607,6 @@ docs = [
 
 [package.metadata]
 requires-dist = [
-    { name = "doroutes", specifier = "~=1.1.0" },
     { name = "gdsfactory", specifier = "~=9.45.0" },
     { name = "gdsfactoryplus" },
     { name = "gdsfactoryplus", marker = "extra == 'dev'" },
